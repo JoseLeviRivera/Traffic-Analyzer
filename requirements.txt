@@ -1,0 +1,4 @@
+psutil~=5.9.8
+ip2geotools~=0.1.6
+pandas~=2.2.0
+python-nmap~=0.7.1
