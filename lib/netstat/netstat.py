@@ -14,10 +14,13 @@ def network_monitor():
 
 
 def show_ip_details(ip):
-    res = DbIpCity.get(ip, api_key="free")
-    print(f"Ip Address: {res.ip_address}")
-    print(f"Location : {res.city}, {res.region}, {res.country}")
-    print(f"Coordinates : (Lat: {res.latitude}, Lng: {res.longitude})")
+    try:
+        res = DbIpCity.get(ip, api_key="free")
+        print(f"Ip Address: {res.ip_address}")
+        print(f"Location : {res.city}, {res.region}, {res.country}")
+        print(f"Coordinates : (Lat: {res.latitude}, Lng: {res.longitude})")
+    except Exception as e:
+        print(f"Error fetching details for IP {ip}: {str(e)}")
 
 
 def get_process_details(pid):
