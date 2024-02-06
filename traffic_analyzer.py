@@ -1,6 +1,7 @@
 import argparse
 
 import lib.netstat.netstat
+from lib.email.email_lib import send_email_attach_file
 from lib.file_utils.file_utils import print_banner_green
 from lib.netstat.netstat_report import network_monitor
 from lib.nmap.scanner_range import scanner_by_port
@@ -35,7 +36,11 @@ print("  -p, --port         Single port to scan.")
 print("  -r, --range        Port range to scan")
 print("  --run-cve          Run CVE script for a specific port.")
 print("  --network-monitor  Monitor network connections and display details.")
-
+print("  --output-file      Specify the output file for analysis results.")
+print("  --email            Enable email report sending.")
+print("  --username         Username for email login.")
+print("  --password         Password for email login.")
+print("  --recipient        Email address of the recipient.")
 print("\nThank you for using Traffic Analyzer. Happy analyzing!")
 
 
@@ -52,6 +57,11 @@ def main():
 
     parser.add_argument("--network-monitor", action="store_true",
                         help="Monitor network connections and display details.")
+
+    parser.add_argument("--email", action="store_true", help="Enable email report sending.")
+    parser.add_argument("--username", help="Username for email login.")
+    parser.add_argument("--password", help="Password for email login.")
+    parser.add_argument("--recipient", help="Email address of the recipient.")
 
     args = parser.parse_args()
 
@@ -79,6 +89,16 @@ def main():
     else:
         print("Error: Please provide valid options. Use -h or --help for more information.")
 
+    if args.email and args.username and args.password and args.recipient:
+
+        if args.output_file:
+            attachment_file = args.output_file
+            send_email_attach_file(args.username,args.password, args.recipient, attachment_file)
+        else:
+            print("Error: Please provide a valid output file for the email report.")
+    elif args.email:
+        print("Error: Please provide valid email credentials and recipient address if email sending is enabled.")
+
 if __name__ == "__main__":
     main()
 
@@ -90,3 +110,4 @@ if __name__ == "__main__":
 # python3 traffic_analyzer.py -ip 127.0.0.1 -p 1444 --output-file report.txt
 # python3 traffic_analyzer.py -ip 127.0.0.1 -r 1443 1444 --output-file report2.txt
 # python3 traffic_analyzer.py -ip 127.0.0.1 -ip 127.0.0.1 -p 1444 --run-cve --output-file report3.txt
+# python3 traffic_analyzer.py -ip 127.0.0.1 -p 1444 --output-file report.txt --email --username <Email@gmail.com> --password <PASWORD12345> --recipient <pepito@gmail.com>

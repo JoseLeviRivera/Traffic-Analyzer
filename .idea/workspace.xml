@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1eec829c-ca68-47de-a510-80898a666d01" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/helper" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/email/email_lib.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/email/email_lib.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/traffic_analyzer.py" beforeDir="false" afterPath="$PROJECT_DIR$/traffic_analyzer.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -23,6 +25,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -32,23 +37,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.email_lib.executor": "Run",
-    "Python.main.executor": "Run",
-    "Python.netstat.executor": "Run",
-    "Python.netstat_report.executor": "Run",
-    "Python.scanner.executor": "Run",
-    "Python.services_db.executor": "Run",
-    "Python.traffic_analyzer.executor": "Run",
-    "Python.ui.executor": "Run",
-    "Python.ui_command_line.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "/home/levi/PycharmProjects/NmapProyect/lib/netstat"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.email_lib.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.netstat.executor&quot;: &quot;Run&quot;,
+    &quot;Python.netstat_report.executor&quot;: &quot;Run&quot;,
+    &quot;Python.scanner.executor&quot;: &quot;Run&quot;,
+    &quot;Python.services_db.executor&quot;: &quot;Run&quot;,
+    &quot;Python.traffic_analyzer.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ui.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ui_command_line.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/levi/PycharmProjects/NmapProyect/lib/netstat&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/lib/netstat" />
