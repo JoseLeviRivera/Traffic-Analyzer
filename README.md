@@ -6,6 +6,7 @@ Welcome to Traffic Analyzer! This is a program designed for network analysis usi
 - Monitor network connections.
 - Generate reports.
 - Send notification emails for services that are registered in the system's local and remote
+![Traffic_Analizer](capture.png)
 
 Use Traffic Analyzer responsibly and follow the documentation on GitHub for instructions.
 ### Requirements
