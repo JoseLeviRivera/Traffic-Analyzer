@@ -65,8 +65,3 @@ def run_cve_script(ip_address, port):
         # Process the result as needed
     except Exception as e:
         print(f"Error scanning port {port}: {str(e)}")
-
-# https://www.youtube.com/shorts/IURkHp9Gnao
-# https://www.youtube.com/shorts/TN0QCTHuo0U
-# https://www.youtube.com/shorts/zU1K__4rqk0
-# https://www.youtube.com/shorts/b2EHY36cMKIhttps://www.youtube.com/shorts/b2EHY36cMKI

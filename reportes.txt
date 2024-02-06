@@ -1,3 +1,0 @@
-Port 1443 is closed, Service: , Version: 
-Port 1444 is open, Service: Microsoft SQL Server 2019, Version: 15.00.4345
-Port 1445 is closed, Service: , Version: 
