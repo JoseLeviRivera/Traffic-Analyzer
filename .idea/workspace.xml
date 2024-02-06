@@ -5,17 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1eec829c-ca68-47de-a510-80898a666d01" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/banner" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/traffic_analyzer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/email/email_lib.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/email/email_lib.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/file_utils/file_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/file_utils/file_utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/nmap/scanner_range.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/nmap/scanner_range.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reportes.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/traffic_analyzer.py" beforeDir="false" afterPath="$PROJECT_DIR$/traffic_analyzer.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

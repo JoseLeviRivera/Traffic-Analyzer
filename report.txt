@@ -1,0 +1,1 @@
+Port 1444 is open, Service: Microsoft SQL Server 2019, Version: 15.00.4345

@@ -1,8 +1,10 @@
 import argparse
-from lib.file_utils.file_utils import print_banner_green, print_green
-from lib.netstat.netstat import network_monitor
-from lib.nmap.scanner_range import scanner_by_port, scanner_by_range, run_cve_script
-from lib.nmap.scan_with_report import scanner_by_port, scanner_by_range, run_cve_script
+
+import lib.netstat.netstat
+from lib.file_utils.file_utils import print_banner_green
+from lib.netstat.netstat_report import network_monitor
+from lib.nmap.scanner_range import scanner_by_port
+from lib.nmap.scan_with_report import scanner_by_port
 
 # Imprimir el banner
 print_banner_green("banner")
@@ -54,23 +56,26 @@ def main():
     args = parser.parse_args()
 
     if args.network_monitor:
-            network_monitor()
+        if args.output_file:
+            lib.netstat.netstat_report.network_monitor(args.output_file)
+        else:
+            lib.netstat.netstat.network_monitor()
     elif args.run_cve:
         if args.output_file:
-            run_cve_script(args.ip, args.port, output_file=args.output_file)
+            lib.nmap.scan_with_report.run_cve_script(args.ip, args.port, output_file=args.output_file)
         else:
-            run_cve_script(args.ip, args.port)
+            lib.nmap.scanner_range.run_cve_script(args.ip, args.port)
     elif args.port:
         if args.output_file:
-            scanner_by_port(args.ip, args.port, output_file=args.output_file)
+            lib.nmap.scan_with_report.scanner_by_port(args.ip, args.port, output_file=args.output_file)
         else:
-            scanner_by_port(args.ip, args.port)
+            lib.nmap.scanner_range.scanner_by_port(args.ip, args.port)
     elif args.range:
         port_min, port_max = args.range
         if args.output_file:
-            scanner_by_range(args.ip, port_min, port_max, output_file=args.output_file)
+            lib.nmap.scan_with_report.scanner_by_range(args.ip, port_min, port_max, output_file=args.output_file)
         else:
-            scanner_by_range(args.ip, port_min, port_max)
+            lib.nmap.scanner_range.scanner_by_range(args.ip, port_min, port_max)
     else:
         print("Error: Please provide valid options. Use -h or --help for more information.")
 
@@ -78,6 +83,7 @@ if __name__ == "__main__":
     main()
 
 # python3 traffic_analyzer.py --network-monitor
+# python3 traffic_analyzer.py --network-monitor --output-file con.txt
 # python3 traffic_analyzer.py -ip 127.0.0.1 -p 1444
 # python3 traffic_analyzer.py -ip 127.0.0.1 -r 1443 1444
 # python3 traffic_analyzer.py -ip 127.0.0.1 -p 1444 --run-cve
