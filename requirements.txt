@@ -3,5 +3,4 @@ psutil
 ip2geotools
 pandas
 pyarrow
-PyQt5
 python-dotenv
